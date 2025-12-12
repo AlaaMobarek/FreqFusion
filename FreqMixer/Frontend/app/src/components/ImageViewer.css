@@ -1,0 +1,111 @@
+.image-viewer {
+  border: 2px solid #444;
+  border-radius: 8px;
+  background: #2d2d2d;
+  overflow: hidden;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.image-viewer:hover {
+  border-color: #666;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+.image-viewer.active {
+  border-color: #4caf50;
+  border-width: 3px;
+}
+
+.image-viewer.input {
+  min-height: 250px;
+}
+
+.image-viewer.output {
+  min-height: 300px;
+}
+
+.viewer-container {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  padding: 10px;
+  background: #1a1a1a;
+}
+
+.displayed-image {
+  border-radius: 4px;
+}
+
+.clear-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: rgba(0, 0, 0, 0.7);
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.3s;
+  z-index: 10;
+}
+
+.clear-btn:hover {
+  background: rgba(220, 53, 69, 0.9);
+}
+
+.placeholder {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: #888;
+  padding: 20px;
+  text-align: center;
+}
+
+.placeholder i {
+  font-size: 48px;
+  margin-bottom: 10px;
+  opacity: 0.5;
+}
+
+.placeholder p {
+  margin: 0;
+  font-size: 14px;
+}
+
+.image-info {
+  background: #3d3d3d;
+  padding: 8px 12px;
+  border-top: 1px solid #444;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.image-name {
+  font-weight: bold;
+  color: #ddd;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 70%;
+}
+
+.image-size {
+  color: #aaa;
+  font-size: 12px;
+  font-family: monospace;
+}
